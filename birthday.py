@@ -1,4 +1,8 @@
+from __future__ import division
+
 import random
+
+# https://en.wikipedia.org/wiki/Birthday_problem
 
 tries = 100000
 matches = 0
@@ -14,4 +18,6 @@ for x in range(tries):
 			birthdays[random.randint(1,365)] = 1
 
 
-print matches
+percentage = 100 * ( matches / tries )
+print percentage, '%'
+
